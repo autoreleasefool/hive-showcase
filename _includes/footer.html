@@ -1,11 +1,22 @@
 <footer class="foot">
+  {% if page.url == '/' %}
+  <p>
+    <a href="/privacy.html">privacy policy</a>
+  </p>
+  {% else %}
+  <p>
+    <a href="/">home</a>
+  </p>
+  {% endif %}
   <p>
     &copy; {{ page.date | date: "%Y" }}
     <a href="https://josephroque.dev"
       ><span class="highlight">Joseph Roque</span></a
     >
   </p>
-  <p>
-    <a href="/privacy.html">privacy policy</a>
+  <p class="subdued disclaimer">
+    Hive is copyright of Gen42 Games. Hive for iOS and its associated elements
+    are not produced by, endorsed by, nor affiliated in any way with Gen42
+    Games.
   </p>
 </footer>
